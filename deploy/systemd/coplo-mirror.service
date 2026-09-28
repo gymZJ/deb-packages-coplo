@@ -1,0 +1,12 @@
+[Unit]
+Description=Update Coplo APT mirror
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=__MIRROR_DIR__/run-update.sh
+WorkingDirectory=__MIRROR_DIR__
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6

@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.DS_Store
+.idea/
+.vscode/
+*.log
+.env
+
+# Mirror runtime state
+mirror/mirror.env
+mirror/release-state.json
+mirror/update.lock
+mirror/.release-state.new
+mirror/.www.new
+mirror/logs/
+mirror/releases/
+mirror/www
+mirror/cache/
+mirror/__pycache__/
+
+# Standalone deployment runtime state
+deploy/standalone/.env
+deploy/standalone/data/
+deploy/standalone/config/
+

@@ -1,0 +1,157 @@
+# Coplo APT package sources.
+# Add or remove one [[package]] block to change the public repository contents.
+# Add a [[suite]] block once when the repository starts supporting a new
+# Debian/Ubuntu release. Distribution-aware packages match it automatically.
+# A configuration change is detected automatically by the mirror updater.
+
+[[suite]]
+name = "bookworm"
+family = "debian"
+release_tokens = ["bookworm", "12"]
+label = "Debian 12 / LMDE 6"
+
+[[suite]]
+name = "trixie"
+family = "debian"
+release_tokens = ["trixie", "13"]
+label = "Debian 13 / LMDE 7"
+default = true
+
+[[suite]]
+name = "jammy"
+family = "ubuntu"
+release_tokens = ["jammy", "22.04"]
+label = "Ubuntu 22.04 LTS / Mint 21"
+
+[[suite]]
+name = "noble"
+family = "ubuntu"
+release_tokens = ["noble", "24.04"]
+label = "Ubuntu 24.04 LTS / Mint 22"
+
+[[suite]]
+name = "resolute"
+family = "ubuntu"
+release_tokens = ["resolute", "26.04"]
+label = "Ubuntu 26.04 LTS"
+
+[[package]]
+name = "zed"
+enabled = true
+repository = "gymZJ/zed-deb"
+upstream_repository = "zed-industries/zed"
+source_type = "packaged"
+patterns = ["zed_*_amd64.deb", "zed_*_arm64.deb"]
+homepage = "https://zed.dev/"
+license = "GPL-3.0 / Apache-2.0"
+
+[[package]]
+name = "uv"
+enabled = true
+repository = "gymZJ/uv-deb"
+upstream_repository = "astral-sh/uv"
+source_type = "packaged"
+patterns = ["uv_*_amd64.deb", "uv_*_arm64.deb"]
+homepage = "https://docs.astral.sh/uv/"
+license = "MIT OR Apache-2.0"
+
+[[package]]
+name = "fonts-jetbrains-mono-nerd"
+enabled = true
+repository = "gymZJ/jetbrains-mono-nerd-deb"
+upstream_repository = "ryanoasis/nerd-fonts"
+source_type = "packaged"
+patterns = ["fonts-jetbrains-mono-nerd_*_all.deb"]
+homepage = "https://www.nerdfonts.com/font-downloads"
+license = "OFL-1.1"
+
+[[package]]
+name = "btop"
+enabled = true
+repository = "gymZJ/btop-deb"
+upstream_repository = "aristocratos/btop"
+source_type = "packaged"
+patterns = ["btop_*_amd64.deb", "btop_*_arm64.deb"]
+homepage = "https://github.com/aristocratos/btop"
+license = "Apache-2.0"
+
+[[package]]
+name = "frp"
+enabled = true
+repository = "gymZJ/frp-deb"
+upstream_repository = "fatedier/frp"
+source_type = "packaged"
+patterns = ["frp_*_amd64.deb", "frp_*_arm64.deb"]
+homepage = "https://github.com/fatedier/frp"
+license = "Apache-2.0"
+
+[[package]]
+name = "fastfetch"
+enabled = true
+repository = "fastfetch-cli/fastfetch"
+upstream_repository = "fastfetch-cli/fastfetch"
+source_type = "upstream-release"
+patterns = ["fastfetch-linux-amd64.deb", "fastfetch-linux-aarch64.deb"]
+homepage = "https://github.com/fastfetch-cli/fastfetch"
+license = "MIT"
+
+[[package]]
+name = "headscale"
+enabled = true
+repository = "juanfont/headscale"
+upstream_repository = "juanfont/headscale"
+source_type = "upstream-release"
+patterns = ["headscale_*_linux_amd64.deb", "headscale_*_linux_arm64.deb"]
+homepage = "https://headscale.net/"
+license = "BSD-3-Clause"
+
+[[package]]
+name = "miniforge3"
+enabled = true
+repository = "gymZJ/miniforge3-deb"
+upstream_repository = "conda-forge/miniforge"
+source_type = "packaged"
+patterns = ["miniforge3_*_amd64.deb", "miniforge3_*_arm64.deb"]
+homepage = "https://github.com/conda-forge/miniforge"
+license = "BSD-3-Clause + bundled licenses"
+
+[[package]]
+name = "duckdb"
+enabled = true
+repository = "gymZJ/duckdb-deb"
+upstream_repository = "duckdb/duckdb"
+source_type = "packaged"
+patterns = ["duckdb_*_amd64.deb", "duckdb_*_arm64.deb"]
+homepage = "https://duckdb.org/"
+license = "MIT"
+
+[[package]]
+name = "openai-codex-cli"
+enabled = true
+repository = "gymZJ/openai-codex-cli-deb"
+upstream_repository = "openai/codex"
+source_type = "packaged"
+patterns = ["openai-codex-cli_*_amd64.deb", "openai-codex-cli_*_arm64.deb"]
+homepage = "https://github.com/openai/codex"
+license = "Apache-2.0"
+
+[[package]]
+name = "geckodriver"
+enabled = true
+repository = "gymZJ/geckodriver-deb"
+upstream_repository = "mozilla/geckodriver"
+source_type = "packaged"
+patterns = ["geckodriver_*_amd64.deb", "geckodriver_*_arm64.deb"]
+homepage = "https://github.com/mozilla/geckodriver"
+license = "MPL-2.0"
+
+[[package]]
+name = "sunshine"
+enabled = true
+repository = "LizardByte/Sunshine"
+upstream_repository = "LizardByte/Sunshine"
+source_type = "upstream-release"
+patterns = ["sunshine-*.deb", "sunshine_*.deb"]
+distribution_aware = true
+homepage = "https://app.lizardbyte.dev/Sunshine/"
+license = "GPL-3.0"

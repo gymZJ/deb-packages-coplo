@@ -1,0 +1,11 @@
+[Unit]
+Description=Update Coplo APT mirror every 30 minutes
+
+[Timer]
+OnCalendar=*-*-* *:00,30:00
+Persistent=true
+AccuracySec=1min
+Unit=coplo-mirror.service
+
+[Install]
+WantedBy=timers.target

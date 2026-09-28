@@ -1,0 +1,15 @@
+{$SITE_ADDRESS::8080} {
+    encode zstd gzip
+
+    @repository path /dists/* /pool/* /catalog.json /coplo-archive-keyring.gpg
+    handle @repository {
+        root * /srv/mirror/www
+        file_server
+    }
+
+    handle {
+        root * /srv/frontend
+        try_files {path} /index.html
+        file_server
+    }
+}
